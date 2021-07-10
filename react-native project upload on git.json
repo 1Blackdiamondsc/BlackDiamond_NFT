@@ -1,0 +1,25 @@
+Upload React Native Project on Git
+
+Step:1 Create Repository in Git Account
+
+Step:2 Go Into the Folder of your project
+
+Step:3 Initialize git
+
+      -> git init
+
+Step:4 Add File into the Git
+
+      -> git add .
+
+Step:5 Do Initial Commit
+
+     -> git commit -m 'initial commit'
+
+Step:6 Add Origin Branch
+
+     -> git remote add origin https://github.com/dharavp/AuthFirebase-react-native.gi  // your Repository's URL
+
+Step:7 Push Code on your master Branch
+
+     ->  git push -u origin master
