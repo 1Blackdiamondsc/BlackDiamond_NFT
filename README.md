@@ -1,31 +1,19 @@
-# Polyfill for `Object.setPrototypeOf`
+# @babel/code-frame
 
-[![NPM Version](https://img.shields.io/npm/v/setprototypeof.svg)](https://npmjs.org/package/setprototypeof)
-[![NPM Downloads](https://img.shields.io/npm/dm/setprototypeof.svg)](https://npmjs.org/package/setprototypeof)
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/standard/standard)
+> Generate errors that contain a code frame that point to source locations.
 
-A simple cross platform implementation to set the prototype of an instianted object.  Supports all modern browsers and at least back to IE8.
+See our website [@babel/code-frame](https://babeljs.io/docs/en/babel-code-frame) for more information.
 
-## Usage:
+## Install
 
-```
-$ npm install --save setprototypeof
-```
+Using npm:
 
-```javascript
-var setPrototypeOf = require('setprototypeof')
-
-var obj = {}
-setPrototypeOf(obj, {
-  foo: function () {
-    return 'bar'
-  }
-})
-obj.foo() // bar
+```sh
+npm install --save-dev @babel/code-frame
 ```
 
-TypeScript is also supported:
+or using yarn:
 
-```typescript
-import setPrototypeOf from 'setprototypeof'
+```sh
+yarn add @babel/code-frame --dev
 ```
