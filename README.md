@@ -1,38 +1,5 @@
-# BlackDiamond_NFT
-ERC1155 NFT Game Dapp
-# This is a basic workflow to help you get started with Actions
+# @apollographql/graphql-playground-html
 
-name: CI
+**NOTE:** This is a fork of [`graphql-playground-html`](https://npm.im/graphql-playground-html) which is meant to be used by Apollo Server and only by Apollo Server.  It is not intended to be used directly.  Those looking to use GraphQL Playground directly can refer to [the upstream repository](https://github.com/prisma-labs/graphql-playground) for usage instructions.
 
-# Controls when the workflow will run
-on:
-  # Triggers the workflow on push or pull request events but only for the main branch
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.![website_logo_solid_background](https://user-images.githubusercontent.com/73549208/125179272-350b5080-e1bb-11eb-80de-57fc21a9df97.png)
+> **SECURITY WARNING:** Via the upstream fork, this package had a severe XSS Reflection attack vulnerability until version `1.6.25` of this package. **While we have published a fix, users were only affected if they were using `@apollographql/graphql-playground-html` directly as their own custom middleware.**  The direct usage of this package was never recommended as it provided no advantage over the upstream package in that regard.  Users of Apollo Server who leverage this package automatically by the dependency declared within Apollo Sever were not affected since Apollo Server never provided dynamic facilities to customize playground options per request.  Users of Apollo Server would have had to statically embedded very explicit vulnerabilities (e.g., using malicious, unescaped code, `<script>` tags, etc.).
