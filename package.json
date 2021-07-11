@@ -1,33 +1,38 @@
 {
-  "name": "@apollographql/graphql-playground-html",
-  "version": "1.6.27",
-  "homepage": "https://github.com/graphcool/graphql-playground/tree/master/packages/graphql-playground-html",
-  "description": "GraphQL IDE for better development workflows (GraphQL Subscriptions, interactive docs & collaboration).",
-  "contributors": [
-    "Tim Suchanek <tim@graph.cool>",
-    "Johannes Schickling <johannes@graph.cool>",
-    "Mohammad Rajabifard <mo.rajbi@gmail.com>"
-  ],
-  "repository": "http://github.com/graphcool/graphql-playground.git",
-  "license": "MIT",
-  "main": "dist/index.js",
-  "files": [
-    "dist"
-  ],
+  "name": "setprototypeof",
+  "version": "1.2.0",
+  "description": "A small polyfill for Object.setprototypeof",
+  "main": "index.js",
+  "typings": "index.d.ts",
   "scripts": {
-    "build": "rimraf dist && tsc",
-    "prepare": "npm run build"
+    "test": "standard && mocha",
+    "testallversions": "npm run node010 && npm run node4 && npm run node6 && npm run node9 && npm run node11",
+    "testversion": "docker run -it --rm -v $(PWD):/usr/src/app -w /usr/src/app node:${NODE_VER} npm install mocha@${MOCHA_VER:-latest} && npm t",
+    "node010": "NODE_VER=0.10 MOCHA_VER=3 npm run testversion",
+    "node4": "NODE_VER=4 npm run testversion",
+    "node6": "NODE_VER=6 npm run testversion",
+    "node9": "NODE_VER=9 npm run testversion",
+    "node11": "NODE_VER=11 npm run testversion",
+    "prepublishOnly": "npm t",
+    "postpublish": "git push origin && git push origin --tags"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wesleytodd/setprototypeof.git"
+  },
+  "keywords": [
+    "polyfill",
+    "object",
+    "setprototypeof"
+  ],
+  "author": "Wes Todd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wesleytodd/setprototypeof/issues"
+  },
+  "homepage": "https://github.com/wesleytodd/setprototypeof",
   "devDependencies": {
-    "@types/node": "12.12.34",
-    "rimraf": "3.0.2",
-    "typescript": "3.9.5"
-  },
-  "typings": "dist/index.d.ts",
-  "typescript": {
-    "definition": "dist/index.d.ts"
-  },
-  "dependencies": {
-    "xss": "^1.0.8"
+    "mocha": "^6.1.4",
+    "standard": "^13.0.2"
   }
 }

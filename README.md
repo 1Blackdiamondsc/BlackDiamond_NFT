@@ -1,5 +1,31 @@
-# @apollographql/graphql-playground-html
+# Polyfill for `Object.setPrototypeOf`
 
-**NOTE:** This is a fork of [`graphql-playground-html`](https://npm.im/graphql-playground-html) which is meant to be used by Apollo Server and only by Apollo Server.  It is not intended to be used directly.  Those looking to use GraphQL Playground directly can refer to [the upstream repository](https://github.com/prisma-labs/graphql-playground) for usage instructions.
+[![NPM Version](https://img.shields.io/npm/v/setprototypeof.svg)](https://npmjs.org/package/setprototypeof)
+[![NPM Downloads](https://img.shields.io/npm/dm/setprototypeof.svg)](https://npmjs.org/package/setprototypeof)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/standard/standard)
 
-> **SECURITY WARNING:** Via the upstream fork, this package had a severe XSS Reflection attack vulnerability until version `1.6.25` of this package. **While we have published a fix, users were only affected if they were using `@apollographql/graphql-playground-html` directly as their own custom middleware.**  The direct usage of this package was never recommended as it provided no advantage over the upstream package in that regard.  Users of Apollo Server who leverage this package automatically by the dependency declared within Apollo Sever were not affected since Apollo Server never provided dynamic facilities to customize playground options per request.  Users of Apollo Server would have had to statically embedded very explicit vulnerabilities (e.g., using malicious, unescaped code, `<script>` tags, etc.).
+A simple cross platform implementation to set the prototype of an instianted object.  Supports all modern browsers and at least back to IE8.
+
+## Usage:
+
+```
+$ npm install --save setprototypeof
+```
+
+```javascript
+var setPrototypeOf = require('setprototypeof')
+
+var obj = {}
+setPrototypeOf(obj, {
+  foo: function () {
+    return 'bar'
+  }
+})
+obj.foo() // bar
+```
+
+TypeScript is also supported:
+
+```typescript
+import setPrototypeOf from 'setprototypeof'
+```

@@ -1,29 +1,17 @@
-'use strict';
+'use strict'
+/* eslint no-proto: 0 */
+module.exports = Object.setPrototypeOf || ({ __proto__: [] } instanceof Array ? setProtoOf : mixinProperties)
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _ponyfill = require('./ponyfill.js');
-
-var _ponyfill2 = _interopRequireDefault(_ponyfill);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-var root; /* global window */
-
-
-if (typeof self !== 'undefined') {
-  root = self;
-} else if (typeof window !== 'undefined') {
-  root = window;
-} else if (typeof global !== 'undefined') {
-  root = global;
-} else if (typeof module !== 'undefined') {
-  root = module;
-} else {
-  root = Function('return this')();
+function setProtoOf (obj, proto) {
+  obj.__proto__ = proto
+  return obj
 }
 
-var result = (0, _ponyfill2['default'])(root);
-exports['default'] = result;
+function mixinProperties (obj, proto) {
+  for (var prop in proto) {
+    if (!Object.prototype.hasOwnProperty.call(obj, prop)) {
+      obj[prop] = proto[prop]
+    }
+  }
+  return obj
+}
