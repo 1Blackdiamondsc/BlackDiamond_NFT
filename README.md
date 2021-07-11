@@ -1,19 +1,19 @@
-# @babel/code-frame
+# @babel/helper-validator-identifier
 
-> Generate errors that contain a code frame that point to source locations.
+> Validate identifier/keywords name
 
-See our website [@babel/code-frame](https://babeljs.io/docs/en/babel-code-frame) for more information.
+See our website [@babel/helper-validator-identifier](https://babeljs.io/docs/en/babel-helper-validator-identifier) for more information.
 
 ## Install
 
 Using npm:
 
 ```sh
-npm install --save-dev @babel/code-frame
+npm install --save-dev @babel/helper-validator-identifier
 ```
 
 or using yarn:
 
 ```sh
-yarn add @babel/code-frame --dev
+yarn add @babel/helper-validator-identifier --dev
 ```
