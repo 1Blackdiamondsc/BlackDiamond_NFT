@@ -97,8 +97,8 @@ character-parser@1.2.1:
   resolved "https://registry.yarnpkg.com/character-parser/-/character-parser-1.2.1.tgz#c0dde4ab182713b919b970959a123ecc1a30fcd6"
   integrity sha1-wN3kqxgnE7kZuXCVmhI+zBow/NY=
 
-clean-css@^3.1.9:
-  version "3.4.28"
+clean-css@^4.1.11:
+  version "4.1.11"
   resolved "https://registry.yarnpkg.com/clean-css/-/clean-css-3.4.28.tgz#bf1945e82fc808f55695e6ddeaec01400efd03ff"
   integrity sha1-vxlF6C/ICPVWlebd6uwBQA79A/8=
   dependencies:
@@ -126,8 +126,8 @@ commander@~2.6.0:
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.6.0.tgz#9df7e52fb2a0cb0fb89058ee80c3104225f37e1d"
   integrity sha1-nfflL7Kgyw+4kFjugMMQQiXzfh0=
 
-constantinople@~3.0.1:
-  version "3.0.2"
+constantinople@~3.1.1:
+  version "3.1.1"
   resolved "https://registry.yarnpkg.com/constantinople/-/constantinople-3.0.2.tgz#4b945d9937907bcd98ee575122c3817516544141"
   integrity sha1-S5RdmTeQe82Y7ldRIsOBdRZUQUE=
   dependencies:
@@ -663,8 +663,8 @@ type-is@~1.6.17, type-is@~1.6.18:
     media-typer "0.3.0"
     mime-types "~2.1.24"
 
-uglify-js@^2.4.19:
-  version "2.8.29"
+uglify-js@^2.6.0:
+  version "2.6.0"
   resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-2.8.29.tgz#29c5733148057bb4e1f75df35b7a9cb72e6a59dd"
   integrity sha1-KcVzMUgFe7Th913zW3qcty5qWd0=
   dependencies:
@@ -673,8 +673,8 @@ uglify-js@^2.4.19:
   optionalDependencies:
     uglify-to-browserify "~1.0.0"
 
-uglify-js@~2.2.5:
-  version "2.2.5"
+uglify-js@~2.6.0:
+  version "2.6.0"
   resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-2.2.5.tgz#a6e02a70d839792b9780488b7b8b184c095c99c7"
   integrity sha1-puAqcNg5eSuXgEiLe4sYTAlcmcc=
   dependencies:
